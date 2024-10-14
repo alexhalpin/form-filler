@@ -53,7 +53,7 @@ def main():
     validate_fields_and_columns(fields, columns)
     validate_output_folder()
 
-    main(table, PDF_FILLER, clean_filename=True)
+    fill_forms(table, PDF_FILLER, clean_filename=True)
 
 
 if __name__ == "__main__":
