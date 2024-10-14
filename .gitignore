@@ -1,0 +1,4 @@
+/dev*
+/build*
+/*.egg-info
+filled_pdfs/file_name_cringe.pdf
