@@ -6,8 +6,6 @@ setup(
     packages=find_packages(),  # Automatically find packages
     install_requires=[
         "pandas",
-        "re",
-        "os",
         "pypdf",
     ],  # List of dependencies
     entry_points={  # Define the entry point
