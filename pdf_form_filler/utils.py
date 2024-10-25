@@ -42,7 +42,7 @@ class PDFFiller:
         if file_extension == "":
             output_pdf_name += ".pdf"
 
-        writer = writer = PdfWriter()
+        writer = PdfWriter()
         writer.clone_reader_document_root(self.reader)
         writer.set_need_appearances_writer(True)
 

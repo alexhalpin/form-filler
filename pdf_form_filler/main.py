@@ -47,8 +47,6 @@ def main():
     validate_file_name_column(columns)
     columns.remove("file_name")
 
-    # print(fields, columns)
-
     validate_for_duplicate_columns(columns)
     validate_fields_and_columns(fields, columns)
     validate_output_folder()

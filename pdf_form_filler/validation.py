@@ -2,6 +2,7 @@ from pdf_form_filler.errors import ValidationError
 from typing import List
 import os
 import re
+import warnings
 
 # PDF Fields
 
@@ -74,15 +75,11 @@ def validate_fields_and_columns(fields: List[str], columns: List[str]):
     fields_not_in_cols = field_set.difference(col_set)
     cols_not_in_fields = col_set.difference(field_set)
 
-    errors = []
     if len(fields_not_in_cols) > 0:
-        errors.append(f"The following pdf field names do not have a corresponding table column: {sorted(list(fields_not_in_cols))}.")
+        warnings.warn(f"The following pdf field names do not have a corresponding table column: {sorted(list(fields_not_in_cols))}.")
 
     if len(cols_not_in_fields) > 0:
-        errors.append(f"The following table columns do not have a corresponding pdf field name: {sorted(list(cols_not_in_fields))}.")
-
-    if len(errors) > 0:
-        raise ValidationError(" ".join(errors))
+        warnings.warn(f"The following table columns do not have a corresponding pdf field name: {sorted(list(cols_not_in_fields))}.")
 
 
 # Directory Structure
