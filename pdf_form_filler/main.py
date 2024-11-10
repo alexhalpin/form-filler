@@ -11,7 +11,7 @@ from pdf_form_filler.validation import (
 )
 
 
-def _clean_filename(input_string):
+def _clean_filename(input_string: str):
     cleaned_string = re.sub(r"[^a-zA-Z0-9\s]", "", input_string)
     cleaned_string = cleaned_string.replace(" ", "_")
     cleaned_string = cleaned_string.lower()
