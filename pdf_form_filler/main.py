@@ -24,7 +24,7 @@ def fill_forms(table: pd.DataFrame, pdf_filler: PDFFiller, clean_filename=False)
     for ri, row in table.iterrows():
         row = row.to_dict()
 
-        file_name = row["file_name"]
+        file_name = str(row["file_name"])
         row.pop("file_name")
 
         if clean_filename:
