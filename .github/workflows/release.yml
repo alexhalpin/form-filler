@@ -56,3 +56,5 @@ jobs:
           asset_path: dist/output/pdf-form-filler.exe  # Adjust to your built executable path
           asset_name: pdf-form-filler.exe
           asset_content_type: application/octet-stream
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
