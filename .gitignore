@@ -3,3 +3,4 @@
 /*.egg-info
 filled_pdfs/file_name_cringe.pdf
 *.pdf
+*/__pycache__
